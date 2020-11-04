@@ -1,0 +1,34 @@
+- Crear un api de conceptos médicos en Kotlin que permita:
+   + Crear un endpoint que permita consultar conceptos por cualquiera de estos campos:
+     - vocabulario
+     - conceptId
+     - dominio
+     - por una palabra en la descripción corta
+     - Ejemplos:
+	+ /concepts?vocabulario=CPT4 trae todos los conceptos que pertenecen al vocabulario CPT4
+   + /concepts?conceptId=2100624 trae el concepto que tenga ese id
+	+ /concepts?vocabulario=CPT4&conceptId=2100624  Hacer combinaciones con dominio o con palabra corta.
+     Nota: 
+      - Usar el patron specification de JPA para el endpoint 
+      - https://www.baeldung.com/rest-api-search-language-spring-data-specifications
+   + Crear un endpoint que permita agregar un concepto
+	- Validar que el conceptId no exista
+   + Crear un endpoint que permita actualizar un concepto
+	- Validar que exista
+   + Crear un endpoint que permita borrar (logicamente) un concepto
+	- Validar que exista
+
++ Actualizar el api de usuarios para que permita:
+  + Que los passwords de un usuario queden encriptados en la bd
+    - eso implica modificar el login y la creación del usuarios
+  + Actualizar el password de un usuario, debe recibir el password actual y el nuevo.
+    Nota:
+     - Usar la clase BCrypt para guardar los passwords y compararlos
+     - https://docs.spring.io/spring-security/site/docs/current/api/org/springframework/security/crypto/bcrypt/BCrypt.html
+     - BCrypt.hashpw y BCrypt.checkpw
+
++ Generar el swagger de ambos servicios
+
++ Unir los dos servicios con el api gateway
+
++ Probar
