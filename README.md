@@ -9,8 +9,6 @@ En la carpeta `tests-postman` hay un archivo JSON `Proyecto 2 Kotlin API Service
 
 `$ cd kotlin-concepts-service-api` 
 
-`$ python3 concepts_worker.py`
-
 `$ make clean`
 
 `$ make compile`
