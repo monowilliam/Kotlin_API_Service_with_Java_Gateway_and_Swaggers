@@ -1,0 +1,690 @@
+{
+	"info": {
+		"_postman_id": "1377e019-a236-4c16-9b5d-64316cef2485",
+		"name": "Proyecto 2 Kotlin API Service",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "kotlin-users-service-api",
+			"item": [
+				{
+					"name": "http://192.168.56.119:8080/login | LOGIN",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"monowilliam\",\r\n    \"password\": \"12345\"\r\n}"
+						},
+						"url": {
+							"raw": "http://192.168.56.119:8080/login",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"56",
+								"119"
+							],
+							"port": "8080",
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://192.168.56.119:8080/users  | CREAR un nuevo usuario",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJibGFjayIsImlkZW50aXR5IjoiYmxhY2siLCJhdXRob3JpdGllcyI6WyJST0xFX1VTRVIiXSwiaWF0IjoxNjAyMDI0MzY2LCJleHAiOjE2MDIwMjQ5NjZ9.GhUpEW5xthqzcSIGVGUDjZA4UHhmDn5nlO6laM_d54BIkQhmL4qdM4cDLLLEQoXGG-G5AuvU5a4oEXiQOid0lg"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"william@gmail.com\",\r\n    \"username\": \"monowilliam\",\r\n    \"password\": \"12345\",\r\n    \"name\": \"William Aguirre\"\r\n}"
+						},
+						"url": {
+							"raw": "http://192.168.56.119:8080/users",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"56",
+								"119"
+							],
+							"port": "8080",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://192.168.56.119:8080/users/1 | BUSCAR un usuario por id Copy",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJibGFjayIsImlkZW50aXR5IjoiYmxhY2siLCJhdXRob3JpdGllcyI6WyJST0xFX1VTRVIiXSwiaWF0IjoxNjAyMDI0MzY2LCJleHAiOjE2MDIwMjQ5NjZ9.GhUpEW5xthqzcSIGVGUDjZA4UHhmDn5nlO6laM_d54BIkQhmL4qdM4cDLLLEQoXGG-G5AuvU5a4oEXiQOid0lg",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://192.168.56.119:8080/users/7",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"56",
+								"119"
+							],
+							"port": "8080",
+							"path": [
+								"users",
+								"7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://192.168.56.119:8080/users | ACTUALIZAR Password",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJibGFjayIsImlkZW50aXR5IjoiYmxhY2siLCJhdXRob3JpdGllcyI6WyJST0xFX1VTRVIiXSwiaWF0IjoxNjAyMDI0MzY2LCJleHAiOjE2MDIwMjQ5NjZ9.GhUpEW5xthqzcSIGVGUDjZA4UHhmDn5nlO6laM_d54BIkQhmL4qdM4cDLLLEQoXGG-G5AuvU5a4oEXiQOid0lg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"monowilliam\",\r\n    \"password\": \"12345\",\r\n    \"newPassword\": \"54321\"\r\n}"
+						},
+						"url": {
+							"raw": "http://192.168.56.119:8080/users",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"56",
+								"119"
+							],
+							"port": "8080",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "kotlin-concepts-service-api",
+			"item": [
+				{
+					"name": "http://192.168.56.120:8080/concept | BUSCAR un Concepto",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJibGFjayIsImlkZW50aXR5IjoiYmxhY2siLCJhdXRob3JpdGllcyI6WyJST0xFX1VTRVIiXSwiaWF0IjoxNjAyMDI0MzY2LCJleHAiOjE2MDIwMjQ5NjZ9.GhUpEW5xthqzcSIGVGUDjZA4UHhmDn5nlO6laM_d54BIkQhmL4qdM4cDLLLEQoXGG-G5AuvU5a4oEXiQOid0lg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"pxordx\" : \"D\",\r\n    \"oldpxordx\" : \"D\",\r\n    \"codetype\" : \"I09\",\r\n    \"concept_class_id\" : \"3-dig nonbill code\",\r\n    \"concept_id\" : \"999\",\r\n    \"vocabulary_id\" : \"ICD9CM\",\r\n    \"standard_concept\" : \"A\",\r\n    \"domain_id\" : \"Condition\",\r\n    \"track\" : \"Medical\",\r\n    \"standard_concep\" : \"A\",\r\n    \"code\" : \"0011\",\r\n    \"codewithperiods\" : \"001.1\",\r\n    \"codescheme\" : \"ICD9DIAG\",\r\n    \"long_desc\" : \"Typhoid and paratyphoid fevers\",\r\n    \"short_desc\" : \"Paratyphoid fever a\",\r\n    \"code_status\" : \"A\",\r\n    \"code_change\" : \"No change\",\r\n    \"code_change_year\" : \"2015\",\r\n    \"code_planned_type\" : \"UP\",\r\n    \"code_billing_status\" : \"Y\",\r\n    \"code_cms_claim_status\" : \"Y\",\r\n    \"sex_cd\" : \"A\",\r\n    \"anat_or_cond\" : \"C\",\r\n    \"poa_code_status\" : \"N\",\r\n    \"poa_code_change\" : \"No change\",\r\n    \"poa_code_change_year\" : \"2015\",\r\n    \"valid_start_date\" : \"19700101\",\r\n    \"valid_end_date\" : \"20991231\",\r\n    \"invalid_reason\" : \"A\",\r\n    \"create_dt\" : \"42005\"\r\n}"
+						},
+						"url": {
+							"raw": "http://192.168.56.120:8080/concept?concept_id=44829696&short_desc=Paratyphoid fever a",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"56",
+								"120"
+							],
+							"port": "8080",
+							"path": [
+								"concept"
+							],
+							"query": [
+								{
+									"key": "concept_id",
+									"value": "44829696"
+								},
+								{
+									"key": "vocabulary_id",
+									"value": "ICD9CM",
+									"disabled": true
+								},
+								{
+									"key": "domain_id",
+									"value": "Condition",
+									"disabled": true
+								},
+								{
+									"key": "short_desc",
+									"value": "Paratyphoid fever a"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://192.168.56.120:8080/concept | CREAR un Concepto",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJibGFjayIsImlkZW50aXR5IjoiYmxhY2siLCJhdXRob3JpdGllcyI6WyJST0xFX1VTRVIiXSwiaWF0IjoxNjAyMDI0MzY2LCJleHAiOjE2MDIwMjQ5NjZ9.GhUpEW5xthqzcSIGVGUDjZA4UHhmDn5nlO6laM_d54BIkQhmL4qdM4cDLLLEQoXGG-G5AuvU5a4oEXiQOid0lg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"pxordx\" : \"D\",\r\n    \"oldpxordx\" : \"D\",\r\n    \"codetype\" : \"I09\",\r\n    \"concept_class_id\" : \"3-dig nonbill code\",\r\n    \"concept_id\" : \"999\",\r\n    \"vocabulary_id\" : \"ICD9CM\",\r\n    \"standard_concept\" : \"A\",\r\n    \"domain_id\" : \"Condition\",\r\n    \"track\" : \"Medical\",\r\n    \"standard_concep\" : \"A\",\r\n    \"code\" : \"0011\",\r\n    \"codewithperiods\" : \"001.1\",\r\n    \"codescheme\" : \"ICD9DIAG\",\r\n    \"long_desc\" : \"Typhoid and paratyphoid fevers\",\r\n    \"short_desc\" : \"Paratyphoid fever a\",\r\n    \"code_status\" : \"A\",\r\n    \"code_change\" : \"No change\",\r\n    \"code_change_year\" : \"2015\",\r\n    \"code_planned_type\" : \"UP\",\r\n    \"code_billing_status\" : \"Y\",\r\n    \"code_cms_claim_status\" : \"Y\",\r\n    \"sex_cd\" : \"A\",\r\n    \"anat_or_cond\" : \"C\",\r\n    \"poa_code_status\" : \"N\",\r\n    \"poa_code_change\" : \"No change\",\r\n    \"poa_code_change_year\" : \"2015\",\r\n    \"valid_start_date\" : \"19700101\",\r\n    \"valid_end_date\" : \"20991231\",\r\n    \"invalid_reason\" : \"A\",\r\n    \"create_dt\" : \"42005\"\r\n}"
+						},
+						"url": {
+							"raw": "http://192.168.56.120:8080/concept",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"56",
+								"120"
+							],
+							"port": "8080",
+							"path": [
+								"concept"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://192.168.56.120:8080/concept | ACTUALIZAR un Concepto",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJibGFjayIsImlkZW50aXR5IjoiYmxhY2siLCJhdXRob3JpdGllcyI6WyJST0xFX1VTRVIiXSwiaWF0IjoxNjAyMDI0MzY2LCJleHAiOjE2MDIwMjQ5NjZ9.GhUpEW5xthqzcSIGVGUDjZA4UHhmDn5nlO6laM_d54BIkQhmL4qdM4cDLLLEQoXGG-G5AuvU5a4oEXiQOid0lg"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"pxordx\" : \"W\",\r\n    \"oldpxordx\" : \"D\",\r\n    \"codetype\" : \"I09\",\r\n    \"concept_class_id\" : \"3-dig nonbill code\",\r\n    \"concept_id\" : \"44829696\",\r\n    \"vocabulary_id\" : \"ICD9CM\",\r\n    \"standard_concept\" : \"A\",\r\n    \"domain_id\" : \"Condition\",\r\n    \"track\" : \"Medical\",\r\n    \"standard_concep\" : \"A\",\r\n    \"code\" : \"0011\",\r\n    \"codewithperiods\" : \"001.1\",\r\n    \"codescheme\" : \"ICD9DIAG\",\r\n    \"long_desc\" : \"Typhoid and paratyphoid fevers\",\r\n    \"short_desc\" : \"Paratyphoid fever a\",\r\n    \"code_status\" : \"A\",\r\n    \"code_change\" : \"No change\",\r\n    \"code_change_year\" : \"2015\",\r\n    \"code_planned_type\" : \"UP\",\r\n    \"code_billing_status\" : \"Y\",\r\n    \"code_cms_claim_status\" : \"Y\",\r\n    \"sex_cd\" : \"A\",\r\n    \"anat_or_cond\" : \"C\",\r\n    \"poa_code_status\" : \"N\",\r\n    \"poa_code_change\" : \"No change\",\r\n    \"poa_code_change_year\" : \"2015\",\r\n    \"valid_start_date\" : \"19700101\",\r\n    \"valid_end_date\" : \"20991231\",\r\n    \"invalid_reason\" : \"A\",\r\n    \"create_dt\" : \"42005\"\r\n}"
+						},
+						"url": {
+							"raw": "http://192.168.56.120:8080/concept",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"56",
+								"120"
+							],
+							"port": "8080",
+							"path": [
+								"concept"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://192.168.56.120:8080/concept/{id} | BORRAR (logicamente) un concepto",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJibGFjayIsImlkZW50aXR5IjoiYmxhY2siLCJhdXRob3JpdGllcyI6WyJST0xFX1VTRVIiXSwiaWF0IjoxNjAyMDI0MzY2LCJleHAiOjE2MDIwMjQ5NjZ9.GhUpEW5xthqzcSIGVGUDjZA4UHhmDn5nlO6laM_d54BIkQhmL4qdM4cDLLLEQoXGG-G5AuvU5a4oEXiQOid0lg"
+							}
+						],
+						"url": {
+							"raw": "http://192.168.56.120:8080/concept/44823922",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"56",
+								"120"
+							],
+							"port": "8080",
+							"path": [
+								"concept",
+								"44823922"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "java-gateway",
+			"item": [
+				{
+					"name": "http://192.168.56.121:8080/login | LOGIN",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"blue\",\r\n    \"password\": \"123456\"\r\n}"
+						},
+						"url": {
+							"raw": "http://192.168.56.121:9999/api/gateway/usersservice/login",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"56",
+								"121"
+							],
+							"port": "9999",
+							"path": [
+								"api",
+								"gateway",
+								"usersservice",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://192.168.56.121:9999/users/1 | BUSCAR un usuario por id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJibGFjayIsImlkZW50aXR5IjoiYmxhY2siLCJhdXRob3JpdGllcyI6WyJST0xFX1VTRVIiXSwiaWF0IjoxNjAyMDI0MzY2LCJleHAiOjE2MDIwMjQ5NjZ9.GhUpEW5xthqzcSIGVGUDjZA4UHhmDn5nlO6laM_d54BIkQhmL4qdM4cDLLLEQoXGG-G5AuvU5a4oEXiQOid0lg",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://192.168.56.121:9999/api/gateway/usersservice/users/1",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"56",
+								"121"
+							],
+							"port": "9999",
+							"path": [
+								"api",
+								"gateway",
+								"usersservice",
+								"users",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://192.168.56.121:9999/users  | CREAR un nuevo usuario",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJibGFjayIsImlkZW50aXR5IjoiYmxhY2siLCJhdXRob3JpdGllcyI6WyJST0xFX1VTRVIiXSwiaWF0IjoxNjAyMDI0MzY2LCJleHAiOjE2MDIwMjQ5NjZ9.GhUpEW5xthqzcSIGVGUDjZA4UHhmDn5nlO6laM_d54BIkQhmL4qdM4cDLLLEQoXGG-G5AuvU5a4oEXiQOid0lg"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"mrwhite@gmail.com\",\r\n    \"username\": \"white\",\r\n    \"password\": \"qwerty\",\r\n    \"name\": \"James White\"\r\n}"
+						},
+						"url": {
+							"raw": "http://192.168.56.121:9999/api/gateway/usersservice/users",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"56",
+								"121"
+							],
+							"port": "9999",
+							"path": [
+								"api",
+								"gateway",
+								"usersservice",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://192.168.56.121:9999/users | ACTUALIZAR Password Copy",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJibGFjayIsImlkZW50aXR5IjoiYmxhY2siLCJhdXRob3JpdGllcyI6WyJST0xFX1VTRVIiXSwiaWF0IjoxNjAyMDI0MzY2LCJleHAiOjE2MDIwMjQ5NjZ9.GhUpEW5xthqzcSIGVGUDjZA4UHhmDn5nlO6laM_d54BIkQhmL4qdM4cDLLLEQoXGG-G5AuvU5a4oEXiQOid0lg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"www\",\r\n    \"password\": \"www\",\r\n    \"newPassword\": \"1234\"\r\n}"
+						},
+						"url": {
+							"raw": "http://192.168.56.121:9999/api/gateway/usersservice/users",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"56",
+								"121"
+							],
+							"port": "9999",
+							"path": [
+								"api",
+								"gateway",
+								"usersservice",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://192.168.56.121:9999/concept | BUSCAR un Concepto",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJibGFjayIsImlkZW50aXR5IjoiYmxhY2siLCJhdXRob3JpdGllcyI6WyJST0xFX1VTRVIiXSwiaWF0IjoxNjAyMDI0MzY2LCJleHAiOjE2MDIwMjQ5NjZ9.GhUpEW5xthqzcSIGVGUDjZA4UHhmDn5nlO6laM_d54BIkQhmL4qdM4cDLLLEQoXGG-G5AuvU5a4oEXiQOid0lg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"pxordx\" : \"D\",\r\n    \"oldpxordx\" : \"D\",\r\n    \"codetype\" : \"I09\",\r\n    \"concept_class_id\" : \"3-dig nonbill code\",\r\n    \"concept_id\" : \"999\",\r\n    \"vocabulary_id\" : \"ICD9CM\",\r\n    \"standard_concept\" : \"A\",\r\n    \"domain_id\" : \"Condition\",\r\n    \"track\" : \"Medical\",\r\n    \"standard_concep\" : \"A\",\r\n    \"code\" : \"0011\",\r\n    \"codewithperiods\" : \"001.1\",\r\n    \"codescheme\" : \"ICD9DIAG\",\r\n    \"long_desc\" : \"Typhoid and paratyphoid fevers\",\r\n    \"short_desc\" : \"Paratyphoid fever a\",\r\n    \"code_status\" : \"A\",\r\n    \"code_change\" : \"No change\",\r\n    \"code_change_year\" : \"2015\",\r\n    \"code_planned_type\" : \"UP\",\r\n    \"code_billing_status\" : \"Y\",\r\n    \"code_cms_claim_status\" : \"Y\",\r\n    \"sex_cd\" : \"A\",\r\n    \"anat_or_cond\" : \"C\",\r\n    \"poa_code_status\" : \"N\",\r\n    \"poa_code_change\" : \"No change\",\r\n    \"poa_code_change_year\" : \"2015\",\r\n    \"valid_start_date\" : \"19700101\",\r\n    \"valid_end_date\" : \"20991231\",\r\n    \"invalid_reason\" : \"A\",\r\n    \"create_dt\" : \"42005\"\r\n}"
+						},
+						"url": {
+							"raw": "http://192.168.56.120:8080/api/gateway/conceptsservice/concept?concept_id=44829696&short_desc=Paratyphoid fever a",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"56",
+								"120"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"gateway",
+								"conceptsservice",
+								"concept"
+							],
+							"query": [
+								{
+									"key": "concept_id",
+									"value": "44829696"
+								},
+								{
+									"key": "vocabulary_id",
+									"value": "ICD9CM",
+									"disabled": true
+								},
+								{
+									"key": "domain_id",
+									"value": "Condition",
+									"disabled": true
+								},
+								{
+									"key": "short_desc",
+									"value": "Paratyphoid fever a"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://192.168.56.121:9999/concept | AGREGAR un Concepto",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJibGFjayIsImlkZW50aXR5IjoiYmxhY2siLCJhdXRob3JpdGllcyI6WyJST0xFX1VTRVIiXSwiaWF0IjoxNjAyMDI0MzY2LCJleHAiOjE2MDIwMjQ5NjZ9.GhUpEW5xthqzcSIGVGUDjZA4UHhmDn5nlO6laM_d54BIkQhmL4qdM4cDLLLEQoXGG-G5AuvU5a4oEXiQOid0lg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"pxordx\" : \"D\",\r\n    \"oldpxordx\" : \"D\",\r\n    \"codetype\" : \"I09\",\r\n    \"concept_class_id\" : \"3-dig nonbill code\",\r\n    \"concept_id\" : \"999\",\r\n    \"vocabulary_id\" : \"ICD9CM\",\r\n    \"standard_concept\" : \"A\",\r\n    \"domain_id\" : \"Condition\",\r\n    \"track\" : \"Medical\",\r\n    \"standard_concep\" : \"A\",\r\n    \"code\" : \"0011\",\r\n    \"codewithperiods\" : \"001.1\",\r\n    \"codescheme\" : \"ICD9DIAG\",\r\n    \"long_desc\" : \"Typhoid and paratyphoid fevers\",\r\n    \"short_desc\" : \"Paratyphoid fever a\",\r\n    \"code_status\" : \"A\",\r\n    \"code_change\" : \"No change\",\r\n    \"code_change_year\" : \"2015\",\r\n    \"code_planned_type\" : \"UP\",\r\n    \"code_billing_status\" : \"Y\",\r\n    \"code_cms_claim_status\" : \"Y\",\r\n    \"sex_cd\" : \"A\",\r\n    \"anat_or_cond\" : \"C\",\r\n    \"poa_code_status\" : \"N\",\r\n    \"poa_code_change\" : \"No change\",\r\n    \"poa_code_change_year\" : \"2015\",\r\n    \"valid_start_date\" : \"19700101\",\r\n    \"valid_end_date\" : \"20991231\",\r\n    \"invalid_reason\" : \"A\",\r\n    \"create_dt\" : \"42005\"\r\n}"
+						},
+						"url": {
+							"raw": "http://192.168.56.121:9999/api/gateway/conceptsservice/concept ",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"56",
+								"121"
+							],
+							"port": "9999",
+							"path": [
+								"api",
+								"gateway",
+								"conceptsservice",
+								"concept "
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://192.168.56.121:9999/concept | ACTUALIZAR un Concepto",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJibGFjayIsImlkZW50aXR5IjoiYmxhY2siLCJhdXRob3JpdGllcyI6WyJST0xFX1VTRVIiXSwiaWF0IjoxNjAyMDI0MzY2LCJleHAiOjE2MDIwMjQ5NjZ9.GhUpEW5xthqzcSIGVGUDjZA4UHhmDn5nlO6laM_d54BIkQhmL4qdM4cDLLLEQoXGG-G5AuvU5a4oEXiQOid0lg"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"pxordx\" : \"W\",\r\n    \"oldpxordx\" : \"D\",\r\n    \"codetype\" : \"I09\",\r\n    \"concept_class_id\" : \"3-dig nonbill code\",\r\n    \"concept_id\" : \"44829696\",\r\n    \"vocabulary_id\" : \"ICD9CM\",\r\n    \"standard_concept\" : \"A\",\r\n    \"domain_id\" : \"Condition\",\r\n    \"track\" : \"Medical\",\r\n    \"standard_concep\" : \"A\",\r\n    \"code\" : \"0011\",\r\n    \"codewithperiods\" : \"001.1\",\r\n    \"codescheme\" : \"ICD9DIAG\",\r\n    \"long_desc\" : \"Typhoid and paratyphoid fevers\",\r\n    \"short_desc\" : \"Paratyphoid fever a\",\r\n    \"code_status\" : \"A\",\r\n    \"code_change\" : \"No change\",\r\n    \"code_change_year\" : \"2015\",\r\n    \"code_planned_type\" : \"UP\",\r\n    \"code_billing_status\" : \"Y\",\r\n    \"code_cms_claim_status\" : \"Y\",\r\n    \"sex_cd\" : \"A\",\r\n    \"anat_or_cond\" : \"C\",\r\n    \"poa_code_status\" : \"N\",\r\n    \"poa_code_change\" : \"No change\",\r\n    \"poa_code_change_year\" : \"2015\",\r\n    \"valid_start_date\" : \"19700101\",\r\n    \"valid_end_date\" : \"20991231\",\r\n    \"invalid_reason\" : \"A\",\r\n    \"create_dt\" : \"42005\"\r\n}"
+						},
+						"url": {
+							"raw": "http://192.168.56.121:9999/api/gateway/conceptsservice/concept",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"56",
+								"121"
+							],
+							"port": "9999",
+							"path": [
+								"api",
+								"gateway",
+								"conceptsservice",
+								"concept"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://192.168.56.121:9999/concept/{id} | BORRAR(logicamente) un concepto",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJibGFjayIsImlkZW50aXR5IjoiYmxhY2siLCJhdXRob3JpdGllcyI6WyJST0xFX1VTRVIiXSwiaWF0IjoxNjAyMDI0MzY2LCJleHAiOjE2MDIwMjQ5NjZ9.GhUpEW5xthqzcSIGVGUDjZA4UHhmDn5nlO6laM_d54BIkQhmL4qdM4cDLLLEQoXGG-G5AuvU5a4oEXiQOid0lg"
+							}
+						],
+						"url": {
+							"raw": "http://192.168.56.121:9999/api/gateway/conceptsservice/concept/44823922",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"56",
+								"121"
+							],
+							"port": "9999",
+							"path": [
+								"api",
+								"gateway",
+								"conceptsservice",
+								"concept",
+								"44823922"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "7cb7b0c4-791f-4edb-87c5-7b0136ce4d57",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "c74d1d45-a516-4c0f-8be9-b07e85e1e4f8",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"protocolProfileBehavior": {}
+}

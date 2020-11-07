@@ -102,7 +102,7 @@ INSERT INTO full_cast_by_movie (`id_person`, `id_role`,`id_movie`, `character`) 
 
 USE UsersDB;
 
-CREATE TABLE `user` (
+CREATE TABLE `UsersDB`.`user` (
   `id` int(11) NOT NULL,
   `email` varchar(255) DEFAULT NULL,
   `name` varchar(255) DEFAULT NULL,
